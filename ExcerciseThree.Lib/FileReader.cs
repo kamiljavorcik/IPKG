@@ -10,7 +10,7 @@ namespace ExcerciseThree.Lib
     {
         public string ReadText(string path, ICrypt crypt = null, IRoles role = null)
         {
-            if (System.IO.Path.GetExtension(path).ToLower() != "txt") throw new Exception("Wrong file type.");
+            if (System.IO.Path.GetExtension(path).ToLower() != ".txt") throw new Exception("Wrong file type.");
             if (role != null) role.check(path);
 
             if (crypt == null)
@@ -21,7 +21,7 @@ namespace ExcerciseThree.Lib
 
         public string ReadXml(string path, ICrypt crypt = null, IRoles role = null)
         {
-            if (System.IO.Path.GetExtension(path).ToLower() != "xml") throw new Exception("Wrong file type.");
+            if (System.IO.Path.GetExtension(path).ToLower() != ".xml") throw new Exception("Wrong file type.");
             if (role != null) role.check(path);
 
             if (crypt == null)
@@ -32,7 +32,7 @@ namespace ExcerciseThree.Lib
 
         public string ReadJson(string path, ICrypt crypt = null, IRoles role = null)
         {
-            if (System.IO.Path.GetExtension(path).ToLower() != "json") throw new Exception("Wrong file type.");
+            if (System.IO.Path.GetExtension(path).ToLower() != ".json") throw new Exception("Wrong file type.");
             if (role != null) role.check(path);
 
             if (crypt == null)

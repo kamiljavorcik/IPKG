@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExcerciseThree.Lib
 {
-    interface IFileReader
+    public interface IFileReader
     {
         string ReadText(string path, ICrypt crypt = null, IRoles role = null);
         string ReadXml(string path, ICrypt crypt = null, IRoles role = null);
