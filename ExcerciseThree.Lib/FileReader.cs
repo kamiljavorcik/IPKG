@@ -18,12 +18,15 @@ namespace ExcerciseThree.Lib
                 return crypt.Decode(System.IO.File.ReadAllText(path));
         }
 
-        public string ReadXml(string path, IRoles role = null)
+        public string ReadXml(string path, ICrypt crypt = null, IRoles role = null)
         {
             if (System.IO.Path.GetExtension(path).ToLower() != "xml") throw new Exception("Wrong file type.");
             if (role != null) role.check(path);
 
-            return System.IO.File.ReadAllText(path);
+            if (crypt == null)
+                return System.IO.File.ReadAllText(path);
+            else
+                return crypt.Decode(System.IO.File.ReadAllText(path));
         }
     }
 }

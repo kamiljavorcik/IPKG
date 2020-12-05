@@ -9,6 +9,6 @@ namespace ExcerciseThree.Lib
     interface IFileReader
     {
         string ReadText(string path, ICrypt crypt = null);
-        string ReadXml(string path, IRoles role = null);
+        string ReadXml(string path, ICrypt crypt = null, IRoles role = null);
     }
 }
