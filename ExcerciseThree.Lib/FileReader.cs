@@ -29,5 +29,11 @@ namespace ExcerciseThree.Lib
             else
                 return crypt.Decode(System.IO.File.ReadAllText(path));
         }
+
+        public string ReadJson(string path)
+        {
+            if (System.IO.Path.GetExtension(path).ToLower() != "json") throw new Exception("Wrong file type.");
+            return System.IO.File.ReadAllText(path);
+        }
     }
 }
