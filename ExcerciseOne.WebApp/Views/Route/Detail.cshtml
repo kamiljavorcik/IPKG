@@ -1,0 +1,29 @@
+﻿@model ExcerciseOne.WebApp.Models.Route
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Vehicle</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Detail", "Route", FormMethod.Post))
+{
+    <div>@Html.LabelFor(x => x.Id)</div>
+    <div>@Html.DisplayFor(x => x.Id)</div>
+
+    <div>@Html.LabelFor(x => x.RouteId)</div>
+    <div>@Html.HiddenFor(x => x.RouteId)@Html.DisplayFor(x => x.RouteId)</div>
+
+    <div>@Html.LabelFor(x => x.VehicleId)</div>
+    <div>@Html.DropDownListFor(x => x.VehicleId, Model.vehicles)</div>
+
+    <div>@Html.LabelFor(x => x.DepartureId)</div>
+    <div>@Html.DropDownListFor(x => x.VehicleId, Model.departures)</div>
+
+    <div>@Html.LabelFor(x => x.DepartureId)</div>
+    <div>@Html.DropDownListFor(x => x.VehicleId, Model.destinations)</div>
+
+    <input type="submit" value="Submit" />
+}

@@ -1,0 +1,36 @@
+﻿@model ExcerciseOne.WebApp.Models.ParkingIndex
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Parkings</h2>
+
+@Html.ActionLink("Add Parking", "Detail")
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>ParkingId</th>
+            <th>Name</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var parking in Model.parkings)
+        {
+            <tr>
+                <td>@parking.Id</td>
+                <td>@parking.ParkingId</td>
+                <td>@parking.Name</td>
+                <td>@parking.Latitude</td>
+                <td>@parking.Longitude</td>
+                <td>@Html.ActionLink("Edit", "Detail", new { Id = parking.ParkingId })</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

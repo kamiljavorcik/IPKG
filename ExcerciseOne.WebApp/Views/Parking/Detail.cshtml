@@ -1,0 +1,29 @@
+﻿@model ExcerciseOne.WebApp.Models.Parking
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Vehicle</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Detail", "Parking", FormMethod.Post))
+{
+    <div>@Html.LabelFor(x => x.Id)</div>
+    <div>@Html.DisplayFor(x=>x.Id)</div>
+    
+    <div>@Html.LabelFor(x => x.ParkingId)</div>
+    <div>@Html.HiddenFor(x => x.ParkingId)@Html.DisplayFor(x => x.ParkingId)</div>
+    
+    <div>@Html.LabelFor(x => x.Name)</div>
+    <div>@Html.EditorFor(x => x.Name)</div>
+    
+    <div>@Html.LabelFor(x => x.Latitude)</div>
+    <div>@Html.EditorFor(x => x.Latitude)</div>
+    
+    <div>@Html.LabelFor(x => x.Longitude)</div>
+    <div>@Html.EditorFor(x => x.Longitude)</div>
+
+    <input type="submit" value="Submit" />
+}

@@ -1,0 +1,36 @@
+﻿@model ExcerciseOne.WebApp.Models.VehicleIndex
+
+@{
+    ViewBag.Title = "Vehicles";
+}
+
+<h2>Vehicles</h2>
+
+@Html.ActionLink("Add Vehicle","Detail")
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>VehicleId</th>
+            <th>Name</th>
+            <th>EnterCost</th>
+            <th>DistanceCost</th>
+            <th></th>
+        </tr>    
+    </thead>
+    <tbody>
+            @foreach (var vehicle in Model.vehicles)
+            {
+                <tr>
+                    <td>@vehicle.Id</td>
+                    <td>@vehicle.VehicleId</td>
+                    <td>@vehicle.Name</td>
+                    <td>@vehicle.EnterCost</td>
+                    <td>@vehicle.DistanceCost</td>
+                    <td>@Html.ActionLink("Edit", "Detail", new { Id = vehicle.VehicleId })</td>
+                </tr>
+            }
+    </tbody>
+
+</table>

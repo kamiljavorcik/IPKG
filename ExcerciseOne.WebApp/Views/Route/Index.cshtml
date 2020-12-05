@@ -1,0 +1,35 @@
+﻿@model ExcerciseOne.WebApp.Models.RouteIndex
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Routes</h2>
+
+@Html.ActionLink("Add Route", "Detail")
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>RouteId</th>
+            <th>VehicleId</th>
+            <th>DepartureId</th>
+            <th>DestinationId</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var route in Model.routes)
+        {
+            <tr>
+                <td>@route.Id</td>
+                <td>@route.RouteId</td>
+                <td>@route.VehicleId</td>
+                <td>@route.DepartureId</td>
+                <td>@route.DestinationId</td>
+                <td>@Html.ActionLink("Edit", "Detail", new { Id = route.RouteId })</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

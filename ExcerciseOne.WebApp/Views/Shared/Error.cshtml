@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Error.</h1>
+        <h2>An error occurred while processing your request.</h2>
+        <h4>Error Details:</h4>
+        <h5>Controller Name: @Model.ControllerName</h5>
+        <h5>Action Name: @Model.ActionName</h5>
+        @if (Configuration.IsDebug)
+        {
+            <h6>Exception: @Model.Exception</h6>
+        }
+    </hgroup>
+</body>
+</html>

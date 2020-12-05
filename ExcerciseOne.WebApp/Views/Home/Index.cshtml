@@ -1,0 +1,54 @@
+﻿@model ExcerciseOne.WebApp.Models.SummaryIndex
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Summary</h1>
+</div>
+
+@Html.ActionLink("Add Route", "Detail", "Route")
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>RouteId</th>
+            <th>Vehicle</th>
+            <th>EnterCost</th>
+            <th>Dist.Cost</th>
+            <th>Dep.Name</th>
+            <th>Dep.Lat.</th>
+            <th>Dep.Lon.</th>
+            <th>Des.Name</th>
+            <th>Des.Lat.</th>
+            <th>Des.Lon.</th>
+            <th>Dist.</th>
+            <th>Cost</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var summary in Model.summaries)
+        {
+            <tr>
+                <td>@summary.Id</td>
+                <td>@summary.RouteId</td>
+                <td>@summary.Vehicle</td>
+                <td>@summary.EnterCost</td>
+                <td>@summary.DistanceCost</td>
+                <td>@summary.DepName</td>
+                <td>@summary.DepLatitude</td>
+                <td>@summary.DepLongitude</td>
+                <td>@summary.DesName</td>
+                <td>@summary.DesLatitude</td>
+                <td>@summary.DesLongitude</td>
+                <td>@summary.Distance</td>
+                <td>@summary.Cost</td>
+                <td>@Html.ActionLink("Edit", "Detail", "Route", new { Id = summary.RouteId }, new { })</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
