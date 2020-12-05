@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcerciseOne.Database", "ExcerciseOne.Database\ExcerciseOne.Database.csproj", "{8963488B-5BF3-40FE-B528-D027CB44C6AC}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcerciseOne.WebApi", "ExcerciseOne.WebApi\ExcerciseOne.WebApi.csproj", "{6EED212E-31CA-4959-8A67-666508E5BEE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcerciseOne.WebApp", "ExcerciseOne.WebApp\ExcerciseOne.WebApp.csproj", "{E4437A5F-003D-43F3-BA61-83B0009ED2E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcerciseTwo", "ExcerciseTwo\ExcerciseTwo.csproj", "{8012A1AA-F71A-4AD9-BBB9-CA9BE7415D99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{E4437A5F-003D-43F3-BA61-83B0009ED2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4437A5F-003D-43F3-BA61-83B0009ED2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4437A5F-003D-43F3-BA61-83B0009ED2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8012A1AA-F71A-4AD9-BBB9-CA9BE7415D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8012A1AA-F71A-4AD9-BBB9-CA9BE7415D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8012A1AA-F71A-4AD9-BBB9-CA9BE7415D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8012A1AA-F71A-4AD9-BBB9-CA9BE7415D99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BCAD6C6-3850-4F7E-A74C-3E3FE9778B0E}
 	EndGlobalSection
 EndGlobal
