@@ -8,15 +8,20 @@ namespace ExcerciseThree.Lib
 {
     public class FileReader : IFileReader
     {
-        public string ReadText(string path)
+        public string ReadText(string path, ICrypt crypt = null)
         {
             if (System.IO.Path.GetExtension(path).ToLower() != "txt") throw new Exception("Wrong file type.");
-            return System.IO.File.ReadAllText(path);
+            
+            if (crypt == null)
+                return System.IO.File.ReadAllText(path);
+            else
+                return crypt.Decode(System.IO.File.ReadAllText(path));
         }
 
         public string ReadXml(string path)
         {
             if (System.IO.Path.GetExtension(path).ToLower() != "xml") throw new Exception("Wrong file type.");
+
             return System.IO.File.ReadAllText(path);
         }
     }
