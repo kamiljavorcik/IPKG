@@ -10,6 +10,6 @@ namespace ExcerciseThree.Lib
     {
         string ReadText(string path, ICrypt crypt = null, IRoles role = null);
         string ReadXml(string path, ICrypt crypt = null, IRoles role = null);
-        string ReadJson(string path, ICrypt crypt = null);
+        string ReadJson(string path, ICrypt crypt = null, IRoles role = null);
     }
 }
