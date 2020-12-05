@@ -8,10 +8,11 @@ namespace ExcerciseThree.Lib
 {
     public class FileReader : IFileReader
     {
-        public string ReadText(string path, ICrypt crypt = null)
+        public string ReadText(string path, ICrypt crypt = null, IRoles role = null)
         {
             if (System.IO.Path.GetExtension(path).ToLower() != "txt") throw new Exception("Wrong file type.");
-            
+            if (role != null) role.check(path);
+
             if (crypt == null)
                 return System.IO.File.ReadAllText(path);
             else
