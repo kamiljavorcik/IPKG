@@ -8,6 +8,7 @@ namespace ExcerciseThree.Lib
 {
     interface IFileReader
     {
-        string ReadText(string filename);
+        string ReadText(string path);
+        string ReadXml(string path);
     }
 }
